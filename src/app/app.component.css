@@ -5,7 +5,7 @@ body {
   /* Optional: Style the content */
   .content {
     width: calc(100vw - 50px); 
-  height: calc(100vh - 20px); 
+  height: calc(100vh ); 
   background-color: white;
   margin: auto;
   border-radius: 30px;
