@@ -2,7 +2,8 @@
 <body>
   <div class="content">
     <div style="display: flex;">
-      <div class="left">
+      
+      <div class="left"  *ngIf="!toggle">
       <div class="catg-menu">
         <button (click)=" catgchange($event)" class="catg"  value="home" >Home</button>
         <button (click)=" catgchange($event)" class="catg"  value="education">Education</button>
@@ -11,12 +12,15 @@
         <button (click)=" catgchange($event)"class="catg" value="publications" style="border-right: 0px;">Publications</button>
       </div>
     </div>
-    <div class="right">
-      <div [ngSwitch]="catg">
+    <div class="right" [ngStyle]="{'flex': toggle ? '0 0 100%' : '0 0 70%' }">
+      <div class="left2" *ngIf="toggle">
+        <button (click)=" changetoggle($event)" style="border: none;background-color: none;"><img src="../assets/menu.svg" style="height: 40px;"></button>
+      </div>
+      <div [ngSwitch]="catg" class="clickable-div">
         <div *ngSwitchCase="'home'">
-          <div style="display: flex;flex-direction: column;">
+          <div style="display: flex;flex-direction: column;align-items: center;">
             <h1 style="text-align: center;">Vikram Nunna</h1>
-          <img src="../assets/vikram.jpeg" style="height: 330px;width: 350px;border-radius:50%;margin-top: 10px;margin-left: calc(100vw*0.23);">
+          <img src="../assets/vikram.jpeg" style="height: 330px;width: 350px;border-radius:50%;margin-top: 10px;position: relative;">
           <p style="margin: 20px;margin-top: 30px;font-size: 1.5em;">Individual with adaptive work culture, analytical thinking, and problem-solving. Aiding the team to walk in the 
       
             success path and strive to provide the fortunate result irrespective of the situation.</p>
