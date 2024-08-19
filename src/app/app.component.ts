@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'blog';
+   catg='certifications';
+   catgchange(event:Event):void {
+    const target = event.target as HTMLButtonElement;
+    this.catg=target.value;
+    console.log(this.catg);
+   }
 }

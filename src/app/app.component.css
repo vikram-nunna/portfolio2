@@ -1,0 +1,85 @@
+body {
+    
+  }
+  
+  /* Optional: Style the content */
+  .content {
+    width: calc(100vw - 50px); 
+  height: calc(100vh - 20px); 
+  background-color: white;
+  margin: auto;
+  border-radius: 30px;
+  }
+  .catg-menu
+  {
+   
+display: flex;
+flex-direction: column;
+height: 100vh;
+width: 100vm;
+align-items: center;
+justify-content: center;
+  }
+  .catg{
+/* width: calc(100vw/4); */
+width:-webkit-fill-available;
+color: black;
+height: 80px;
+border-top: 0px;
+border-left: 0px;
+border-right: 0px;
+border-bottom: 0px;
+background-color: rgb(101, 100, 100);
+font-size: 30px;
+  }
+  .catg:hover{
+    background-color: whitesmoke;
+    color: black;
+    font-size: 25px;
+  }
+  .left{
+    flex: 0 0 30%;
+    background-color: rgb(101, 100, 100);
+    height: 100vh;
+    border-top-left-radius: 10px;
+  }
+  .right{
+    flex: 0 0 70%;
+    background-color: whitesmoke;
+    height: 100vh;
+    border-top-right-radius: 10px;
+  }
+  .container{
+
+  }
+  .svg-container
+  {
+    position: relative;
+    display: inline-block;
+  }
+  .svg-text{
+    visibility: hidden;
+    color: black;
+    text-align: center;
+  }
+.svg-container:hover .svg-text
+{
+  visibility: visible;
+  opacity: 1;
+}
+.svg-container img
+{
+  height: 40px;
+}
+.svg-container:hover img{
+  height: 50px;
+}
+.skills
+{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.certifications-text{
+  font-size:35px;
+}
