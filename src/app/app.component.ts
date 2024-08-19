@@ -7,8 +7,8 @@ import { Component,HostListener } from '@angular/core';
 })
 export class AppComponent {
   title = 'blog';
-   catg='home';
-   toggle=true;
+   catg='publications';
+   toggle=false;
    catgchange(event:Event):void {
     const target = event.target as HTMLButtonElement;
     this.catg=target.value;

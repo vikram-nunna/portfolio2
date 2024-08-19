@@ -1,85 +1,97 @@
 body {
-    
-  }
-  
-  /* Optional: Style the content */
-  .content {
-    width: calc(100vw - 50px); 
-  height: calc(100vh ); 
-  background-color: white;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  width: calc(100vw - 50px); 
+  height: calc(100vh - 50px); /* Ensures it takes the full viewport height minus some padding */
+  background-color: whitesmoke;
   margin: auto;
   border-radius: 30px;
-  }
-  .catg-menu
-  {
-   
-display: flex;
-flex-direction: column;
-height: 100vh;
-width: 100vm;
-align-items: center;
-justify-content: center;
-  }
-  .catg{
-/* width: calc(100vw/4); */
-width:-webkit-fill-available;
-color: black;
-height: 80px;
-border-top: 0px;
-border-left: 0px;
-border-right: 0px;
-border-bottom: 0px;
-background-color: rgb(101, 100, 100);
-font-size: 30px;
-  }
-  .catg:hover{
-    background-color: whitesmoke;
-    color: black;
-    font-size: 25px;
-  }
-  .left{
-    flex: 0 0 30%;
-    background-color: rgb(101, 100, 100);
-    height: 100vh;
-    border-top-left-radius: 10px;
-  }
-  .right{
-    flex: 0 0 70%;
-    background-color: whitesmoke;
-    height: 100vh;
-    border-top-right-radius: 10px;
-  }
-  .container{
+}
 
-  }
-  .svg-container
-  {
-    position: relative;
-    display: inline-block;
-  }
-  .svg-text{
-    visibility: hidden;
-    color: black;
-    text-align: center;
-  }
-.svg-container:hover .svg-text
-{
-  visibility: visible;
-  opacity: 1;
+.left {
+  flex: 0 0 30%; /* Ensures the left div takes 30% of the width */
+  background-color: rgb(101, 100, 100);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 100%; /* Takes full height of the content */
 }
-.svg-container img
-{
-  height: 40px;
+
+.right {
+  flex: 0 0 70%; /* Ensures the right div takes 70% of the width */
+  background-color: whitesmoke;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Takes full height of the content */
+  position: relative;
 }
-.svg-container:hover img{
-  height: 50px;
+
+.catg-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
-.skills
-{
+
+.catg {
+  width: -webkit-fill-available;
+  color: black;
+  height: 80px;
+  border: 0;
+  background-color: rgb(101, 100, 100);
+  font-size: 30px;
+}
+
+.catg:hover {
+  background-color: whitesmoke;
+  color: black;
+  font-size: 25px;
+}
+
+.skills {
   display: flex;
   gap: 20px;
   justify-content: center;
 }
-.certifications-text{
-  font-size:35px;
+
+.certifications-text {
+  font-size: 35px;
+}
+
+.svg-container {
+  position: relative;
+  display: inline-block;
+}
+
+.svg-text {
+  visibility: hidden;
+  color: black;
+  text-align: center;
+}
+
+.svg-container:hover .svg-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.svg-container img {
+  height: 40px;
+}
+
+.svg-container:hover img {
+  height: 50px;
+}
+.clickable-div{
+  height: 100%;
 }
